@@ -288,7 +288,7 @@ impl<'a> Target<'a> {
                     .ar_path(self.triple)
                     .map_err(CompileLibError::MissingTool)?,
             )
-            .with_env_var("TARGET_CC", clang_path)
+            .with_env_var("TARGET_CC", "C:/hostedtoolcache/windows/ndk/r25b/x64/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe")
             .with_env_var("TARGET_CXX", clangxx_path)
             .with_args(&["--color", color])
             .run_and_wait()
